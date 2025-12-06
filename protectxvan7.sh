@@ -5,7 +5,7 @@ REMOTE_PATH="/var/www/pterodactyl/app/Http/Controllers/Admin/ApiController.php"
 TIMESTAMP=$(date -u +"%Y-%m-%d-%H-%M-%S")
 BACKUP_PATH="${REMOTE_PATH}.bak_${TIMESTAMP}"
 
-echo "🚀 Backup & patch ApiController (protect Application API only for user id=1)"
+echo "🚀 Memasang Proteksi Anti Akses Application API..."
 
 # backup
 if [ -f "$REMOTE_PATH" ]; then
@@ -132,4 +132,4 @@ fi
 echo "✅ Proteksi Anti Akses Application Api berhasil dipasang!"
 echo "📂 Lokasi file: $REMOTE_PATH"
 echo "🗂️ Backup file lama: ${BACKUP_PATH} (jika sebelumnya ada)"
-echo "🔒 Hanya Admin (ID 1) yang bisa Akses Settings."
+echo "🔒 Hanya Admin (ID 1) yang bisa Akses Application Api."
